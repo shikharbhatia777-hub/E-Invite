@@ -23,7 +23,7 @@
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  html{ scroll-behavior:smooth; scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px)); height:100%; }
+  html{ scroll-behavior:smooth; scroll-padding-top: calc(90px + env(safe-area-inset-top, 0px)); height:100%; }
   *,*::before,*::after{ box-sizing:inherit; }
   body{
     margin:0; min-height:100%;
@@ -78,8 +78,8 @@
   /* ---------- NAV ---------- */
   .nav{ position:fixed; top:0; left:0; right:0; z-index:50; padding-top: env(safe-area-inset-top, 0px); background:rgba(251,244,236,0); transition:background .4s ease, box-shadow .4s ease, border-color .4s ease; border-bottom:1px solid transparent; }
   .nav.is-scrolled{ background:rgba(251,244,236,0.95); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-color:var(--line); box-shadow: 0 4px 20px rgba(91,42,59,0.1); }
-  .nav-inner{ width:min(1100px,92%); margin-inline:auto; display:flex; align-items:center; justify-content:space-between; height:64px; }
-  .nav-logo{ font-family:'Cormorant Garamond', serif; font-size:1.3rem; font-style:italic; color:var(--wine); text-decoration:none; transition: all 0.3s ease; }
+  .nav-inner{ width:min(1100px,92%); margin-inline:auto; display:flex; align-items:center; justify-content:space-between; height:90px; }
+  .nav-logo{ font-family:'Cormorant Garamond', serif; font-size:1.3rem; font-style:italic; color:var(--wine); text-decoration:none; transition: all 0.3s ease; transform: translateY(-8px); }
   .nav-logo:hover { transform: scale(1.1); color: var(--gold); }
   @keyframes heartbeat { 0%,100%{ transform: scale(1); } 50%{ transform: scale(1.2); } }
   @keyframes spin { 0%{ transform: rotate(0deg); } 100%{ transform: rotate(360deg); } }
@@ -94,7 +94,7 @@
   .music-toggle svg{ width:17px; height:17px; }
   .nav-right{ display:flex; align-items:center; }
   @media (max-width: 780px){
-    .nav-links{ position:fixed; inset:64px 0 auto 0; flex-direction:column; gap:0; background:var(--ivory); border-bottom:1px solid var(--line); transform:translateY(-8px); opacity:0; pointer-events:none; transition:opacity .3s ease, transform .3s ease; padding:.5rem 6% 1rem; }
+    .nav-links{ position:fixed; inset:90px 0 auto 0; flex-direction:column; gap:0; background:var(--ivory); border-bottom:1px solid var(--line); transform:translateY(-8px); opacity:0; pointer-events:none; transition:opacity .3s ease, transform .3s ease; padding:.5rem 6% 1rem; }
     .nav-links.is-open{ opacity:1; transform:translateY(0); pointer-events:auto; }
     .nav-links a{ display:block; padding:.85rem 0; border-bottom:1px solid var(--line); }
     .nav-toggle{ display:inline-flex; }
@@ -102,7 +102,7 @@
 
   /* ---------- HERO ---------- */
   .hero{ position:relative; min-height:100svh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;
-    background: linear-gradient(135deg, rgba(251,244,236,0.5) 0%, rgba(251,244,236,0.5) 100%), url('shadi.png') center 10%/cover no-repeat, radial-gradient(120% 90% at 15% 10%, var(--blush) 0%, transparent 55%), radial-gradient(110% 90% at 85% 15%, var(--lavender) 0%, transparent 55%), radial-gradient(140% 100% at 50% 100%, var(--peach) 0%, transparent 60%), var(--ivory);
+    background: linear-gradient(135deg, rgba(251,244,236,0.5) 0%, rgba(251,244,236,0.5) 100%), url('photo.jpg') center/cover no-repeat, radial-gradient(120% 90% at 15% 10%, var(--blush) 0%, transparent 55%), radial-gradient(110% 90% at 85% 15%, var(--lavender) 0%, transparent 55%), radial-gradient(140% 100% at 50% 100%, var(--peach) 0%, transparent 60%), var(--ivory);
     padding: 6rem 1.5rem 4rem; }
   .hero-content{ position:relative; z-index:2; max-width:640px; }
   .hero-blessing{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:clamp(0.95rem,1.8vw,1.08rem); color:#2B1B2F; margin:0 0 .3rem; opacity:0; animation:riseIn 1s ease-out .1s forwards; font-weight:600; text-shadow: 0 2px 8px rgba(255,255,255,0.3); }
@@ -330,7 +330,7 @@
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">S &amp; A</a>
+    <a href="#hero" class="nav-logo"><img src="icon.png" alt="S&A Logo" style="height: 100px; width: auto;"></a>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
         <li><a href="#events">Events</a></li>
